@@ -110,10 +110,7 @@ const Root = styled(Box)(({ theme }) => ({
     },
 }));
 const ActionDialog = styled(Dialog)(({ theme }) => ({
-    // "& button": {
-    //     textTransform: "none",
-    //     padding: "5px 25px !important"
-    // },
+
     "& .addtoMealBtn": {
         textTransform: "none",
         backgroundColor: "#004370 !important",
@@ -299,7 +296,7 @@ function Home() {
                         </Box>
                     ))}
                 </DialogContent>
-                <DialogActions sx={{ justifyContent: "center !important", }} >
+                <DialogActions sx={{ marginBottom: "10px", justifyContent: "center !important", }} >
                     <Button className='addtoMealBtn' variant='contained' onClick={handleSaveMeal} autoFocus>
                         Save
                     </Button>

@@ -7,6 +7,7 @@ import CardActionArea from '@mui/material/CardActionArea';
 import { styled } from '@mui/material/styles';
 import Rating from '@mui/material/Rating';
 import Delete from '@mui/icons-material/DeleteForeverOutlined';
+import CircularProgress from '@mui/material/CircularProgress';
 //redux
 import { useDispatch } from 'react-redux';
 import { deleteWeekOneMeal } from '../store/WeekOneSlice';
@@ -178,7 +179,7 @@ function Tab({ meal, getDataFromChild, isSubmitted, setIsSubmitted, selectedTab 
                     </Card>
                 )) :
                 <Box sx={{ height: "100vh", display: "flex", justifyContent: "center", width: "100%", marginTop: "50px" }}>
-                    <Typography variant="h6" gutterBottom component="div"> No Meal Selected For This Week</Typography>
+                    {selectedTab === "All Meals" ? <CircularProgress /> : <Typography variant="h6" gutterBottom component="div"> No Meal Selected For This Week</Typography>}
                 </Box>
             }
         </Root>
